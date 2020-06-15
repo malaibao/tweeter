@@ -35,7 +35,10 @@
     box-shadow: 0 5px 15px rgba(127, 127, 191);
 }
 
-.new-tweet counter{
-    color: black;
+.new-tweet .counter{
     font-weight: 800;
+}
+
+.red-text{
+    color: red;
 }
