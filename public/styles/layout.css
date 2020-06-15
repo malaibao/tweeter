@@ -23,13 +23,32 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+nav{
+  height: 120px;
+  background-color: #304387;
+  color: white;
+  padding: 1.5em;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
 
+}
+
+nav .title{
+  font-family: 'Bungee', cursive;
+  font-size:  40px;
+}
+
+nav .sub-title{
+  padding-bottom: 0;
+}
 
 
  /* FONT INFO
 // 
  
  // Source Code Pro
+font-family: 'Bungee', cursive;
 font-family: 'Indie Flower', cursive;
 font-family: 'Orbitron', sans-serif;
 font-family: 'Source Code Pro', monospace;
