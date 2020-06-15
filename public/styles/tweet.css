@@ -7,6 +7,10 @@
   padding: 1em;
 }
 
+.tweet article:hover {
+  box-shadow: 0.6em 0.6em rgb(133, 131, 131, 0.75);
+}
+
 /* Make the name text beside img middle */
 .tweet img {
   vertical-align: middle;
@@ -36,4 +40,8 @@ p {
 
 .tweet i {
   color: #304387;
+}
+
+.alias-name{
+  display: none;
 }
