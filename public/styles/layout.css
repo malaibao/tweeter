@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -24,8 +26,8 @@ body {
   justify-content: center;
 }
 
-header{
-  background-image: url("../images/background2.jfif");
+.profile-background {
+  background-image: url('../images/background2.jfif');
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
@@ -35,17 +37,16 @@ header{
   justify-content: center;
 }
 
-.first-name{
+.first-name {
   font-weight: 900;
 }
 
-main{
+main {
   width: 90vw;
   align-self: center;
 }
 
-
- /* FONT INFO
+/* FONT INFO
 // 
  
  // Source Code Pro
