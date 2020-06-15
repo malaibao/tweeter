@@ -1,44 +1,41 @@
-.new-tweet textarea{
-    border: none;
-    background-color: transparent;
-    border-bottom: 3px solid darkblue;
-    outline: none;
-    width: 100%;
-    height: 5em;
+.new-tweet textarea {
+  border: none;
+  background-color: transparent;
+  border-bottom: 3px solid darkblue;
+  outline: none;
+  width: 100%;
+  height: 5em;
 }
 
-.new-tweet #tweet-text:focus{
-
-    box-shadow: 0 0 10px rgba(81, 203, 238, 1);
-
+.new-tweet #tweet-text:focus {
+  box-shadow: 0 0 10px rgba(81, 203, 238, 1);
 }
 
-.new-tweet .form-bottom{
-    display: flex;
-    justify-content: space-between;
+.new-tweet .form-bottom {
+  display: flex;
+  justify-content: space-between;
 }
 
-.new-tweet button{
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: white;
-    background-color: darkblue;
-    margin-top: 0.8em;
-    padding: 0.5em;
-    transition: all 0.4s ease-in-out;
-
+.new-tweet button {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  background-color: darkblue;
+  margin-top: 0.8em;
+  padding: 0.5em;
+  transition: all 0.4s ease-in-out;
 }
 
-.new-tweet button:hover{
-    cursor: pointer;
-    background-color: rgb(97, 97, 204);
-    box-shadow: 0 5px 15px rgba(127, 127, 191);
+.new-tweet button:hover {
+  cursor: pointer;
+  background-color: rgb(97, 97, 204);
+  box-shadow: 0 5px 15px rgba(127, 127, 191);
 }
 
-.new-tweet .counter{
-    font-weight: 800;
+.new-tweet .counter {
+  font-weight: 800;
 }
 
-.red-text{
-    color: red;
+.red-text {
+  color: red;
 }
