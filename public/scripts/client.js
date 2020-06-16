@@ -3,7 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
 const renderTweets = (tweets) => {
   $.each(tweets, (i, tweetObj) => {
     $('#tweets-container').append(createTweetElement(tweetObj));
@@ -37,11 +36,26 @@ const createTweetElement = (tweetObj) => {
     </article>`;
 };
 
+const addTweetHoverEffect = () => {
+  const tweetArticles = $('article.tweet');
+
+  tweetArticles.on('mouseenter', function () {
+    $(this).find('header').find('div.alias-name').removeClass('hide');
+    $(this).find('i').addClass('text-shadow');
+  });
+
+  tweetArticles.on('mouseleave', function () {
+    $(this).find('header').find('div.alias-name').addClass('hide');
+    $(this).find('i').removeClass('text-shadow');
+  });
+};
+
 const loadTweets = () => {
   $.get('/tweets', function (data, status) {
     console.log('inside ajax of loadTweets');
     console.log(data);
     renderTweets(data);
+    addTweetHoverEffect();
   })
     .done(() => {
       console.log('Done with AJAX GET request');
