@@ -6,6 +6,10 @@ nav {
   line-height: 50px;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 nav .title {
