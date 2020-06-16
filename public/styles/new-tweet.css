@@ -29,14 +29,14 @@
 .new-tweet button:hover {
   cursor: pointer;
   background-color: rgb(97, 97, 204);
-  box-shadow: 0 0.3em 0.7em rgba(127, 127, 191);
+  box-shadow: 0 0.3em 0.7em rgba(127, 127, 191, 0.5);
 }
 
 .new-tweet .counter {
   font-weight: 800;
 }
 
-/* class to be toggled by jQuery */
+/* classes to be toggled by jQuery */
 .red-text {
   color: red;
 }
