@@ -1,0 +1,16 @@
+/* header has a name so that article's header won't inherit this */
+.profile-background {
+    background-image: url('../images/background2.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .first-name {
+    font-weight: 900;
+  }
+  
