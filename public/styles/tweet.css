@@ -1,17 +1,17 @@
 .tweet {
-  border: 5px solid darkgrey;
+  border: 5px solid #949FAA;
   margin: 2em 0;
 }
 
-.tweet article {
+article.tweet {
   padding: 1em;
 }
 
-.tweet article:hover {
-  box-shadow: 0.6em 0.6em rgb(133, 131, 131, 0.75);
+article.tweet:hover {
+  box-shadow: 0.6em 0.6em rgb(133, 131, 131, 0.3);
 }
 
-/* Make the name text beside img middle */
+/* Make the name text beside img vetically centered */
 .tweet img {
   vertical-align: middle;
   height: 3em;
@@ -29,19 +29,33 @@
   padding: 1em;
 }
 
-p {
+.alias-name{
+  color: rgb(177, 175, 175);
+}
+
+.tweet p {
   padding: 0 1em;
 }
 
 .tweet footer {
   padding-top: 1em;
-  border-top: 5px solid darkgrey;
+  border-top: 5px solid #949FAA;
 }
 
 .tweet i {
   color: #304387;
 }
 
-.alias-name{
+/* classes to be toggled by jQuery */
+.hide{ 
   display: none;
 }
+
+.bolder{
+  font-weight: 600;
+}
+
+.text-shadow{
+  text-shadow: 0.025em 0.025em #4e5e98;
+}
+
