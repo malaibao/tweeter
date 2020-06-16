@@ -4,36 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    user: {
-      name: 'Newton',
-      avatars: 'https://i.imgur.com/73hZDYK.png',
-      handle: '@SirIsaac',
-    },
-    content: {
-      text:
-        'If I have seen further it is by standing on the shoulders of giants',
-    },
-    created_at: 1461116232227,
-  },
-  {
-    user: {
-      name: 'Descartes',
-      avatars: 'https://i.imgur.com/nlhLi3I.png',
-      handle: '@rd',
-    },
-    content: {
-      text: 'Je pense , donc je suis',
-    },
-    created_at: 1461113959088,
-  },
-];
-
 const renderTweets = (tweets) => {
   $.each(tweets, (i, tweetObj) => {
-    console.log('hello');
     $('#tweets-container').append(createTweetElement(tweetObj));
   });
 };
@@ -65,6 +37,46 @@ const createTweetElement = (tweetObj) => {
     </article>`;
 };
 
+const loadTweets = () => {
+  $.get('/tweets', function (data, status) {
+    console.log('inside ajax of loadTweets');
+    console.log(data);
+    renderTweets(data);
+  })
+    .done(() => {
+      console.log('Done with AJAX GET request');
+    })
+    .fail(() => console.log('Oops! Problem with GET request'));
+};
+
 $(document).ready(function () {
-  renderTweets(data);
+  // renderTweets(data);
+  loadTweets();
+  const formTarget = $('#tweet-form');
+  formTarget.on('submit', function (e) {
+    e.preventDefault();
+    const data = $(this).serialize();
+
+    $.post('/tweets', data)
+      .done(() => {
+        console.log('Done with AJAX POST request');
+      })
+      .fail(() => {
+        console.log('oh no! Something wrong with sending POST request.');
+      });
+
+    /* Another method, i dont wanna delete this part */
+    // const success = () => {
+    //   console.log('inside success');
+    // };
+
+    // $.ajax({
+    //   type: 'POST',
+    //   url: '/tweets',
+    //   data: data,
+    //   success: success,
+    // }).then(function () {
+    //   console.log('OKAY!!');
+    // });
+  });
 });
