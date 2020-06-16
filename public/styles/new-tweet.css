@@ -36,6 +36,7 @@
   font-weight: 800;
 }
 
+/* class to be toggled by jQuery */
 .red-text {
   color: red;
 }

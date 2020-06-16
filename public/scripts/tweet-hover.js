@@ -1,26 +1,20 @@
 $(document).ready(function () {
-    const tweetArticle = $('.tweet article');
-    const aliasName = $('.alias-name')
-
-    const toggleShow = $('.alias-name');
+    const tweetArticle = $('article.tweet');
+    const tweetIcons = $('.tweet i');
+    const aliasName = $('.alias-name');
 
     tweetArticle.on('mouseenter', function () {
-        toggleShow.css('display', 'block');
+        console.log('enter', aliasName);
+        aliasName.removeClass('hide');
+        tweetArticle.addClass('bolder');
+        tweetIcons.addClass('text-shadow');
+
     })
     tweetArticle.on('mouseleave', function () {
-        toggleShow.css('display', 'none');
+        console.log('exit', aliasName);
+        aliasName.addClass('hide');
+        tweetArticle.removeClass('bolder');
+        tweetIcons.removeClass('text-shadow');
+
     })
-
-    // tweetArticle.hover(function () {
-    //     // aliasName.addClass('show');
-    //     toggleShow.css('display', 'block');
-    //     console.log('Hello')
-    // }, function () {
-    //     // aliasName.removeClass('show');
-    //     toggleShow.css('display', 'none');
-    //     console.log('Bye')
-
-    // })
-
-
 });
