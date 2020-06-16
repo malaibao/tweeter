@@ -14,11 +14,12 @@ $(document).ready(function () {
   });
 
   // add text-shadow effect on textarea when hover
+  // extra effect
   tweetText.on('mouseenter', function () {
     tweetText.addClass('shadow-textarea');
-  })
+  });
 
   tweetText.on('mouseleave', function () {
     tweetText.removeClass('shadow-textarea');
-  })
+  });
 });

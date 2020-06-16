@@ -1,20 +1,13 @@
 $(document).ready(function () {
-    const tweetArticle = $('article.tweet');
-    const tweetIcons = $('.tweet i');
-    const aliasName = $('.alias-name');
+  const tweetArticles = $('article.tweet');
 
-    tweetArticle.on('mouseenter', function () {
-        console.log('enter', aliasName);
-        aliasName.removeClass('hide');
-        tweetArticle.addClass('bolder');
-        tweetIcons.addClass('text-shadow');
+  tweetArticles.on('mouseenter', function () {
+    $(this).find('header').find('div.alias-name').removeClass('hide');
+    $(this).find('i').addClass('text-shadow');
+  });
 
-    })
-    tweetArticle.on('mouseleave', function () {
-        console.log('exit', aliasName);
-        aliasName.addClass('hide');
-        tweetArticle.removeClass('bolder');
-        tweetIcons.removeClass('text-shadow');
-
-    })
+  tweetArticles.on('mouseleave', function () {
+    $(this).find('header').find('div.alias-name').addClass('hide');
+    $(this).find('i').removeClass('text-shadow');
+  });
 });
