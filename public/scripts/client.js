@@ -59,8 +59,21 @@ $(document).ready(function () {
 
     // validate form data
     const errorMsg = validateForm();
+    // if (errorMsg) {
+    //   displayErrMsg(errorMsg);
+    //   return;
+    // } else {
+    //   hideErrMsg();
+    // }
+
+    // hideErrMsg();
+    // if (errorMsg) {
+    //   displayErrMsg(errorMsg);
+    //   return;
+    // }
+
     if (errorMsg) {
-      alert(`${errorMsg}`);
+      displayErrMsg(errorMsg);
       return;
     }
 
@@ -68,6 +81,9 @@ $(document).ready(function () {
     $.post('/tweets', data)
       .done(() => {
         console.log('Done with AJAX POST request');
+
+        // clear container and load tweets again
+        $('#tweets-container').empty();
         loadTweets();
 
         // set tweetarea values back to default
