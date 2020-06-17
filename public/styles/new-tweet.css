@@ -36,6 +36,15 @@
   font-weight: 800;
 }
 
+.error-msg {
+  border: 0.3em solid red;
+  padding: 0.5em;
+  color: red;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.05em;
+  display: none;
+}
+
 /* classes to be toggled by jQuery */
 .red-text {
   color: red;

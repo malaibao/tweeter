@@ -23,6 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Bungee&family=Indie+Flower&family=Orbitron&family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Source+Sans+Pro&display=swap"
       rel="stylesheet"
     />
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
@@ -37,7 +38,8 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/char-counter.js"></script>
     <script type="text/javascript" src="/scripts/tweet-hover.js"></script>
-    <script type="text/javascript" src="/scripts/validateForm.js"></script>
+    <script type="text/javascript" src="/scripts/validate-form.js"></script>
+    <script type="text/javascript" src="/scripts/err-msg-handler.js"></script>
     <script
       src="https://kit.fontawesome.com/d18c482918.js"
       crossorigin="anonymous"
@@ -60,6 +62,7 @@
 
     <main class="container">
       <section class="new-tweet">
+        <p id="err-msg"></p>
         <h2>Compose Tweet</h2>
         <form id="tweet-form" action="/tweets" method="POST">
           <label for="tweet-text"></label>
