@@ -3,9 +3,10 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 const renderTweets = (tweets) => {
   $.each(tweets, (i, tweetObj) => {
-    $('#tweets-container').append(createTweetElement(tweetObj));
+    $('#tweets-container').prepend(createTweetElement(tweetObj));
   });
 };
 
@@ -36,24 +37,8 @@ const createTweetElement = (tweetObj) => {
     </article>`;
 };
 
-const addTweetHoverEffect = () => {
-  const tweetArticles = $('article.tweet');
-
-  tweetArticles.on('mouseenter', function () {
-    $(this).find('header').find('div.alias-name').removeClass('hide');
-    $(this).find('i').addClass('text-shadow');
-  });
-
-  tweetArticles.on('mouseleave', function () {
-    $(this).find('header').find('div.alias-name').addClass('hide');
-    $(this).find('i').removeClass('text-shadow');
-  });
-};
-
 const loadTweets = () => {
-  $.get('/tweets', function (data, status) {
-    console.log('inside ajax of loadTweets');
-    console.log(data);
+  $.get('/tweets', function (data) {
     renderTweets(data);
     addTweetHoverEffect();
   })
@@ -64,33 +49,29 @@ const loadTweets = () => {
 };
 
 $(document).ready(function () {
-  // renderTweets(data);
   loadTweets();
   const formTarget = $('#tweet-form');
   formTarget.on('submit', function (e) {
     e.preventDefault();
-    const data = $(this).serialize();
 
-    $.post('/tweets', data)
+    // validate form data
+    const errorMsg = validateForm();
+    if (errorMsg) {
+      alert(`${errorMsg}`);
+      return;
+    }
+
+    const data = $(this).serialize();
+    $.post('/tweets', data, function (returnedData) {
+      console.log('returned', returnedData);
+    })
       .done(() => {
         console.log('Done with AJAX POST request');
+        // location.reload();
+        $('#tweets-container').load(location.href + ' #section-container');
       })
       .fail(() => {
         console.log('oh no! Something wrong with sending POST request.');
       });
-
-    /* Another method, i dont wanna delete this part */
-    // const success = () => {
-    //   console.log('inside success');
-    // };
-
-    // $.ajax({
-    //   type: 'POST',
-    //   url: '/tweets',
-    //   data: data,
-    //   success: success,
-    // }).then(function () {
-    //   console.log('OKAY!!');
-    // });
   });
 });
