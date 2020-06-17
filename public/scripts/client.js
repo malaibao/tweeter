@@ -67,11 +67,15 @@ $(document).ready(function () {
     })
       .done(() => {
         console.log('Done with AJAX POST request');
+        loadTweets();
+        $('#tweet-text').val('');
         // location.reload();
-        $('#tweets-container').load(location.href + ' #section-container');
+        // $('#tweets-container').load(location.href + ' #section-container');
       })
       .fail(() => {
         console.log('oh no! Something wrong with sending POST request.');
       });
   });
 });
+
+/* $.post and $.get are shorthands of $.ajax */
