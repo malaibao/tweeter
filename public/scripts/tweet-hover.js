@@ -1,4 +1,4 @@
-$(document).ready(function () {
+const addTweetHoverEffect = () => {
   const tweetArticles = $('article.tweet');
 
   tweetArticles.on('mouseenter', function () {
@@ -10,4 +10,4 @@ $(document).ready(function () {
     $(this).find('header').find('div.alias-name').addClass('hide');
     $(this).find('i').removeClass('text-shadow');
   });
-});
+};
