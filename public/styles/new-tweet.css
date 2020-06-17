@@ -1,3 +1,7 @@
+.new-tweet {
+  display: none;
+}
+
 .new-tweet textarea {
   border: none;
   background-color: transparent;

@@ -52,8 +52,8 @@ const loadTweets = () => {
 };
 
 $(document).ready(function () {
-  loadTweets();
-  addButtonEffect();
+  loadTweets(); // get tweets
+  writeNewTweetBtnEffect(); // register events on 'Write New Tweet' btn
 
   const formTarget = $('#tweet-form');
 
