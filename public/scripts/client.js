@@ -3,6 +3,11 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+const escape = (str) => {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const renderTweets = (tweets) => {
   $.each(tweets, (i, tweetObj) => {
@@ -24,7 +29,7 @@ const createTweetElement = (tweetObj) => {
             <div class='alias-name hide'>${user.handle}</div>
         </header>
         <p>
-            ${content}
+            ${escape(content)}
         </p>
         <footer>
             <div>
@@ -42,9 +47,7 @@ const loadTweets = () => {
     renderTweets(data);
     addTweetHoverEffect();
   })
-    .done(() => {
-      console.log('Done with AJAX GET request');
-    })
+    .done(() => console.log('Done with AJAX GET request'))
     .fail(() => console.log('Oops! Problem with GET request'));
 };
 
@@ -62,19 +65,18 @@ $(document).ready(function () {
     }
 
     const data = $(this).serialize();
-    $.post('/tweets', data, function (returnedData) {
-      console.log('returned', returnedData);
-    })
+    $.post('/tweets', data)
       .done(() => {
         console.log('Done with AJAX POST request');
         loadTweets();
+
+        // set tweetarea values back to default
         $('#tweet-text').val('');
-        // location.reload();
-        // $('#tweets-container').load(location.href + ' #section-container');
+        $('.counter').val(140);
       })
-      .fail(() => {
-        console.log('oh no! Something wrong with sending POST request.');
-      });
+      .fail(() =>
+        console.log('oh no! Something wrong with sending POST request.')
+      );
   });
 });
 
