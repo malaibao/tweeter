@@ -30,6 +30,11 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="/styles/button_stanalone.css"
+      type="text/css"
+    />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -40,6 +45,7 @@
     <script type="text/javascript" src="/scripts/tweet-hover.js"></script>
     <script type="text/javascript" src="/scripts/validate-form.js"></script>
     <script type="text/javascript" src="/scripts/err-msg-handler.js"></script>
+    <script type="text/javascript" src="/scripts/arrowIcon-hover.js"></script>
     <script
       src="https://kit.fontawesome.com/d18c482918.js"
       crossorigin="anonymous"
@@ -49,14 +55,25 @@
   <body>
     <nav>
       <div class="title">tweeter</div>
-      <div class="sub-title">Write a new tweet</div>
+      <div class="sub-title">
+        <button class="write-tweet-btn">
+          <strong>Write</strong> a new tweet
+          <i class="fas fa-angle-double-down"></i>
+        </button>
+        <!-- <div>
+          Write a new tweet
+        </div>
+        <div>
+          <i class="fas fa-angle-double-down"></i>
+        </div> -->
+      </div>
     </nav>
     <header class="profile-background">
       <div>
         <img src="/images/profile-hex.png" />
       </div>
       <div>
-        <h2><span class="first-name">Your</span> Name</h2>
+        <h2><span class="first-name">Maribelle</span> Leong</h2>
       </div>
     </header>
 
