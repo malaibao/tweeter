@@ -53,7 +53,10 @@ const loadTweets = () => {
 
 $(document).ready(function () {
   loadTweets();
+  addButtonEffect();
+
   const formTarget = $('#tweet-form');
+
   formTarget.on('submit', function (e) {
     e.preventDefault();
 
@@ -97,3 +100,4 @@ $(document).ready(function () {
 });
 
 /* $.post and $.get are shorthands of $.ajax */
+/* I tried with $.ajax (works!) before I converted them */
