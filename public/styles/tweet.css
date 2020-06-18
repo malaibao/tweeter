@@ -47,15 +47,15 @@ article.tweet:hover {
   color: #304387;
 }
 
-/* classes to be toggled by jQuery */
+.tweet:hover .alias-name {
+  display: block;
+}
+
+.tweet:hover i {
+  text-shadow: 0.025em 0.025em 0.025em #4e5e98;
+}
+
+/* hide alias-name in default */
 .hide {
   display: none;
-}
-
-.bolder {
-  font-weight: 600;
-}
-
-.text-shadow {
-  text-shadow: 0.025em 0.025em 0.025em #4e5e98;
 }

@@ -1,8 +1,8 @@
-.new-tweet {
+#new-tweet {
   display: none;
 }
 
-.new-tweet textarea {
+#new-tweet textarea {
   border: none;
   background-color: transparent;
   border-bottom: 0.2em solid darkblue;
@@ -11,16 +11,16 @@
   height: 5em;
 }
 
-.new-tweet #tweet-text:focus {
+#new-tweet #tweet-text:focus {
   box-shadow: 0 0 0.6em rgba(81, 203, 238, 1);
 }
 
-.new-tweet .form-bottom {
+#new-tweet .form-bottom {
   display: flex;
   justify-content: space-between;
 }
 
-.new-tweet button {
+#new-tweet button {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: white;
@@ -30,13 +30,13 @@
   transition: all 0.4s ease-in-out;
 }
 
-.new-tweet button:hover {
+#new-tweet button:hover {
   cursor: pointer;
   background-color: rgb(97, 97, 204);
   box-shadow: 0 0.3em 0.7em rgba(127, 127, 191, 0.5);
 }
 
-.new-tweet .counter {
+#new-tweet .counter {
   font-weight: 800;
 }
 
@@ -49,11 +49,7 @@
   display: none;
 }
 
-/* classes to be toggled by jQuery */
+/* class to be toggled on .counter by jQuery */
 .red-text {
   color: red;
-}
-
-.shadow-textarea {
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
 }

@@ -1,3 +1,5 @@
+// Checking if the form is empty or user input is over character limit
+
 const validateForm = () => {
   const formValue = document.getElementById('tweet-text').value;
   if (formValue.length > 140) {

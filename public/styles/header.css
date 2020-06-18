@@ -1,4 +1,4 @@
-/* header has a name so that article's header won't inherit this */
+/* header has a classname so that article's header won't inherit this */
 .profile-background {
   background-image: url('../images/background2.jfif');
   background-repeat: no-repeat;

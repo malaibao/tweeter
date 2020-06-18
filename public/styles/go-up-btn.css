@@ -18,12 +18,14 @@
   outline: none;
 }
 
-/* classes to be toggled by jQuery */
-.enlarge-icon {
+#go-up-btn:hover i {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
   font-size: 2em;
   color: #304387;
 }
 
+/* class to be toggled on #go-up-btn by jQuery */
 .hide-btn {
   transition: all 0.5s ease-in-out;
   display: none;

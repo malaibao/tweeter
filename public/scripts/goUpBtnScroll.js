@@ -1,4 +1,7 @@
-const goUpBtnScrollEffect = () => {
+// Effect of bringing user back to the top of the page
+// when #go-up-btn is clicked
+
+const goUpBtnScroll = () => {
   const goUpBtn = $('#go-up-btn');
 
   $(window).scroll(function () {

@@ -1,20 +1,24 @@
 nav {
   height: 4.5em;
+  width: 100%;
+  line-height: 50px;
+
   background-color: #304387;
   color: white;
   padding: 1.5em;
-  line-height: 50px;
   display: flex;
   justify-content: space-between;
+
   overflow: hidden;
   position: fixed;
   top: 0;
-  width: 100%;
 }
 
 nav .title {
   font-family: 'Bungee', cursive;
   font-size: 40px;
+  text-decoration: none;
+  color: white;
 }
 
 .write-tweet-btn {
@@ -33,12 +37,12 @@ nav .title {
   color: yellow;
 }
 
-/* animation for icon */
-
-.move-up-and-down {
+.write-tweet-btn:hover i {
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;
 }
+
+/* animation for icon */
 .move-up-and-down {
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;

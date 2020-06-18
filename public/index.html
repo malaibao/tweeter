@@ -33,20 +33,28 @@
     <link rel="stylesheet" href="/styles/go-up-btn.css" type="text/css" />
     <link rel="stylesheet" href="/styles/media-query.css" type="text/css" />
 
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/d18c482918.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/char-counter.js"></script>
-    <script type="text/javascript" src="/scripts/tweet-hover.js"></script>
-    <script type="text/javascript" src="/scripts/validate-form.js"></script>
-    <script type="text/javascript" src="/scripts/err-msg-handler.js"></script>
-    <script type="text/javascript" src="/scripts/buttons-effect.js"></script>
-    <script type="text/javascript" src="/scripts/go-up-btn.js"></script>
+
+    <script type="text/javascript" src="/scripts/newTweetBtnEffect.js"></script>
+    <script type="text/javascript" src="/scripts/counterTextEffect.js"></script>
+    <script type="text/javascript" src="/scripts/goUpBtnScroll.js"></script>
+
+    <script type="text/javascript" src="/scripts/validateForm.js"></script>
+    <script type="text/javascript" src="/scripts/tweetsHandler.js"></script>
+    <script type="text/javascript" src="/scripts/errMsgHandler.js"></script>
     <script
-      src="https://kit.fontawesome.com/d18c482918.js"
-      crossorigin="anonymous"
+      type="text/javascript"
+      src="/scripts/formSubmissionHandler.js"
     ></script>
 
     <meta
@@ -57,7 +65,7 @@
 
   <body>
     <nav>
-      <div class="title">tweeter</div>
+      <div><a href="/" class="title">tweeter</a></div>
       <div class="sub-title">
         <button class="write-tweet-btn">
           <strong>Write</strong> a new tweet
@@ -74,11 +82,11 @@
       </header>
 
       <main class="container">
-        <section class="new-tweet">
+        <section id="new-tweet">
           <p id="err-msg"></p>
           <h2>Compose Tweet</h2>
           <form id="tweet-form" action="/tweets" method="POST">
-            <label for="tweet-text"></label>
+            <label for="tweet-text">Tweet Text</label>
             <textarea
               name="text"
               id="tweet-text"
