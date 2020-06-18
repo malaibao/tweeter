@@ -43,6 +43,9 @@ const createTweetElement = (tweetObj) => {
 };
 
 const loadTweets = () => {
+  // emtpy the tweets container, avoid redundancy
+  $('#tweets-container').empty();
+
   $.get('/tweets', function (data) {
     renderTweets(data);
     addTweetHoverEffect();
@@ -52,31 +55,25 @@ const loadTweets = () => {
 };
 
 $(document).ready(function () {
-  loadTweets(); // get tweets
-  writeNewTweetBtnEffect(); // register events on 'Write New Tweet' btn
+  // get tweets
+  loadTweets();
+
+  // register events on 'Write New Tweet' btn and
+  // go-up-btn hover and scroll effects
+  // inside write-tweet-btn.js
+  writeNewTweetBtnEffect();
+  goUpBtnEffect();
+  goUpBtnScrollEffect();
 
   const formTarget = $('#tweet-form');
-
   formTarget.on('submit', function (e) {
     e.preventDefault();
 
-    // validate form data
+    // validate form data (validate-form.js)
     const errorMsg = validateForm();
-    // if (errorMsg) {
-    //   displayErrMsg(errorMsg);
-    //   return;
-    // } else {
-    //   hideErrMsg();
-    // }
-
-    // hideErrMsg();
-    // if (errorMsg) {
-    //   displayErrMsg(errorMsg);
-    //   return;
-    // }
 
     if (errorMsg) {
-      displayErrMsg(errorMsg);
+      displayErrMsg(errorMsg); // (err-msg-handler.js)
       return;
     }
 
@@ -85,8 +82,7 @@ $(document).ready(function () {
       .done(() => {
         console.log('Done with AJAX POST request');
 
-        // clear container and load tweets again
-        $('#tweets-container').empty();
+        // load tweets again
         loadTweets();
 
         // set tweetarea values back to default

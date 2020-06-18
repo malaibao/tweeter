@@ -18,3 +18,16 @@ const writeNewTweetBtnEffect = () => {
     });
   });
 };
+
+const goUpBtnEffect = () => {
+  const goUpBtn = $('#go-up-btn');
+  const upIcon = $('#go-up-btn i');
+
+  goUpBtn.on('mouseenter', function () {
+    upIcon.addClass('enlarge-icon move-up-and-down');
+  });
+
+  goUpBtn.on('mouseleave', function () {
+    upIcon.removeClass('enlarge-icon move-up-and-down');
+  });
+};

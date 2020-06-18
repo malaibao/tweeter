@@ -13,20 +13,5 @@ const displayErrMsg = (errMsg) => {
 
 const hideErrMsg = () => {
   const errMsgP = $('#err-msg');
-  //   errMsgP.empty();
-
   errMsgP.stop();
 };
-
-/* 
-displayErrMsg
-  //   if (!prevMsg) {
-  //     errMsgP.slideDown();
-  //   }
-
-  //   errMsgP.slideDown();
-
-hideErrMsg
-  //   errMsgP.slideUp();
-
-*/
