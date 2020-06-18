@@ -24,12 +24,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 #### Show error message when the textarea is empty or the user input is over 140 characters. Submit a tweet and it shows directly in the page
 
-![Submitting a Tweet Demo](.\docs\submitting-tweet.gif 'Submit a Tweet')
+![Submitting a Tweet Demo](./docs/submitting-tweet.gif 'Submit a Tweet')
 
 #### Click on the right bottom button to get back to the top of the page
 
-![Back to Top Demo](.\docs\back-to-top.gif 'Back to Top')
+![Back to Top Demo](./docs/back-to-top.gif 'Back to Top')
 
 #### Responsive Design
 
-![Responsive Demo](.\docs\responsive-design.gif 'Responsive View')
+![Responsive Demo](./docs/responsive-design.gif 'Responsive View')
