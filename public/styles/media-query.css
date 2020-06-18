@@ -11,5 +11,15 @@
     margin-left: 2em;
     margin-top: 4em;
     padding-top: 0;
+    background-image: url('https://wallpaperaccess.com/full/824786.jpg');
+  }
+
+  nav {
+    background-color: #d1a2a9;
+  }
+
+  #go-up-btn:hover i,
+  .tweet i {
+    color: #d1a2a9;
   }
 }
