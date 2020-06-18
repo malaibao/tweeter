@@ -14,12 +14,21 @@
     background-image: url('https://wallpaperaccess.com/full/824786.jpg');
   }
 
-  nav {
+  nav,
+  #new-tweet button {
     background-color: #d1a2a9;
   }
 
   #go-up-btn:hover i,
   .tweet i {
     color: #d1a2a9;
+  }
+
+  #new-tweet textarea {
+    border-bottom: 0.2em solid #aa5461;
+  }
+
+  #new-tweet #tweet-text:focus {
+    box-shadow: 0 0 0.6em #e5cace;
   }
 }
