@@ -26,15 +26,11 @@ body {
   justify-content: center;
 }
 
-main {
-  width: 90vw;
-  align-self: center;
+main.container {
+  margin: 2em;
 }
 
 /* FONT INFO
-// 
- 
- // Source Code Pro
 font-family: 'Bungee', cursive;
 font-family: 'Indie Flower', cursive;
 font-family: 'Orbitron', sans-serif;

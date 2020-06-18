@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/go-up-btn.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media-query.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -47,6 +48,11 @@
       src="https://kit.fontawesome.com/d18c482918.js"
       crossorigin="anonymous"
     ></script>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
   </head>
 
   <body>
@@ -59,37 +65,39 @@
         </button>
       </div>
     </nav>
-    <header class="profile-background">
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <div>
-        <h2><span class="first-name">Maribelle</span> Leong</h2>
-      </div>
-    </header>
+    <div id="media-query-box">
+      <header class="profile-background">
+        <div class="profile-pic">
+          <img src="/images/profile-hex.png" />
+        </div>
+        <div class="name"><span class="first-name">Maribelle</span> Leong</div>
+      </header>
 
-    <main class="container">
-      <section class="new-tweet">
-        <p id="err-msg"></p>
-        <h2>Compose Tweet</h2>
-        <form id="tweet-form" action="/tweets" method="POST">
-          <label for="tweet-text"></label>
-          <textarea
-            name="text"
-            id="tweet-text"
-            placeholder="What are you humming about?"
-          ></textarea>
-          <div class="form-bottom">
-            <button type="submit">Tweet <i class="fas fa-dove"></i></button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
+      <main class="container">
+        <section class="new-tweet">
+          <p id="err-msg"></p>
+          <h2>Compose Tweet</h2>
+          <form id="tweet-form" action="/tweets" method="POST">
+            <label for="tweet-text"></label>
+            <textarea
+              name="text"
+              id="tweet-text"
+              placeholder="What are you humming about?"
+            ></textarea>
+            <div class="form-bottom">
+              <button type="submit">Tweet <i class="fas fa-dove"></i></button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </section>
 
-      <section id="tweets-container">
-        <article class="tweet hide"></article>
-      </section>
-    </main>
+        <section id="tweets-container">
+          <article class="tweet hide"></article>
+        </section>
+      </main>
+    </div>
     <button class="hide-btn" id="go-up-btn">
       <i class="fas fa-angle-up"></i>
     </button>
