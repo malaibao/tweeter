@@ -20,16 +20,16 @@ This repository is the starter code for the project: Students will fork and clon
 
 #### Toggle to show and hide tweet form
 
-![Back to Top](.\docs\toggle-form.gif 'toggle-form')
+![Toggling Form Demo](docs/toggle-form.gif 'toggle-form')
 
 #### Show error message when the textarea is empty or the user input is over 140 characters. Submit a tweet and it shows directly in the page
 
-![Back to Top](.\docs\submitting-tweet.gif 'Submit a Tweet')
+![Submitting a Tweet Demo](.\docs\submitting-tweet.gif 'Submit a Tweet')
 
 #### Click on the right bottom button to get back to the top of the page
 
-![Back to Top](.\docs\back-to-top.gif 'Back to Top Demo')
+![Back to Top Demo](.\docs\back-to-top.gif 'Back to Top')
 
 #### Responsive Design
 
-![Back to Top](.\docs\responsive-design.gif 'Responsive View')
+![Responsive Demo](.\docs\responsive-design.gif 'Responsive View')
