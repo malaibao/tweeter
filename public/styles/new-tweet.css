@@ -49,6 +49,17 @@
   display: none;
 }
 
+/* hide label from interface */
+/* for better accessibility of screen reader */
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* class to be toggled on .counter by jQuery */
 .red-text {
   color: red;
